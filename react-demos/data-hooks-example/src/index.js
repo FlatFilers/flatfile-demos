@@ -6,10 +6,11 @@ import FlatfileImporter from "flatfile-csv-importer";
 import "./styles.css";
 
 import {flatfileConfig} from "./flatfile-config";
-import * as basic from './basic.csv'
+import * as basic from "./basic.csv"
 
 const urlParams = new URLSearchParams(window.location.search);
 const LICENSE_KEY = urlParams.get('license');
+// const LICENSE_KEY = "4171f0b4-5f5c-4b32-a008-356ebb813e4e";
 
 // this is the configuration for the Flatile importer
 FlatfileImporter.setVersion(2);
