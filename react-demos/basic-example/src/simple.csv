@@ -1,0 +1,31 @@
+id,name,address,city,state,zip_code,education,employed
+A1234567890,Colin Floweth,3 Carberry Place,Monroe,LA,71213,high_school,TRUE
+2829107890,Caren Leppington,506 Boyd Center,Springfield,Illinois,62711,some_college,FALSE
+3271027389,Carol Marner,7 John Wall Center,,,,high_school,TRUE
+3271027389,Cherrita Sermin,2 Superior Place,Erie,PA,6534,none,TRUE
+18293098-23,Far Maskell,77 Hazelcrest Trail,Salem,OR,97312,some_college,TRUE
+9872123789,Caryl Moorrud,9159 Morning Road,Cleveland,OH,,associates,TRUE
+1739436485,Bell Letteresse,80668 Jana Drive,Wichita,KS,7236,masters,TRUE
+92718235,Lynna MacGillivray,7177 Ilene Way,Vero Beach,,,associates,TRUE
+2341628345,Leroi DiBiasio,11878 Sachs Pass,San Jose,CA,95150,high_school,FALSE
+6282341345,Fan Haitlie,0 Chive Alley,Reno,NV,89519,some_college,FALSE
+1823456732,Chaunce Mulcahy,293 5th Junction,Sioux City,IA,1105,associates,TRUE
+1209876543,Jamie Bauser,24 Mayer Road,Raleigh,NC,27610,some_college,FALSE
+1312345678,Ruperta Ranklin,0 Sunnyside Center,Brooklyn,NY,,bachelors,TRUE
+1409876543,Samaria Oram,5 Roth Parkway,Orange,CA,92862,high_school,TRUE
+15123456-78,Codi Wigginton,8 Waubesa Road,Las Vegas,NV,89140,some_college,TRUE
+1609876543,Dory Grangier,80 Mayer Trail,,CA,,bachelors,FALSE
+1712345678,Codi Colquyte,28584 Arizona Circle,Shawnee Mission,KS,66215,bachelors,FALSE
+1809876543,Archaimbaud Harnetty,07180 Pepper Wood Avenue,Indianapolis,Indiana,46247,some_college,FALSE
+1912345678,Teodor McLeod,10 Jenna Way,New York City,NY,10019,high_school,FALSE
+2009876543,Wendye Ralph,00 Little Fleur Trail,New York City,NY,,associates,TRUE
+2109876543,Julie Tuffield,5 Packers Drive,Peoria,Illinois,61640,bachelors,TRUE
+2212345678,Brit Rouzet,075 Michigan Crossing,Wilkes Barre,PA,18706,some_college,FALSE
+2309876543,Bernetta Gaiford,0004 Dakota Terrace,Lubbock,TX,79491,high_school,TRUE
+A2409876543,Minna Tippell,17 Milwaukee Lane,Denver,CO,,bachelors,TRUE
+2512345678,Timothy Sollime,2856 Boyd Drive,New York City,NY,10039,associates,TRUE
+2612345678,Wallache Billington,1 Brentwood Lane,Philadelphia,PA,19141,high_school,TRUE
+2709876543,Daryl Cartmell,5605 Graedel Lane,Tallahassee,FL,,associates,TRUE
+2812345678,Benn Wheldon,606 Mcguire Crossing,Carson City,NV,89714,high_school,FALSE
+2909876543,Romeo Brimblecombe,7875 Russell Road,Visalia,CA,93291,bachelors,TRUE
+3012345678,Allison Balazs,0 Trailsway Crossing,Pittsburgh,PA,15279,bachelors,TRUE
