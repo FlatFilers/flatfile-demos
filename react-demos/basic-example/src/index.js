@@ -5,11 +5,12 @@ import FlatfileImporter from "flatfile-csv-importer";
 
 import "./styles.css";
 
-import {flatfileLicense} from './license-key.js'
-import {DemoApp} from "./components/DemoApp";
-import {flatfileConfigs, RecordHooks} from "./configs";
+import {flatfileConfig} from "./flatfile-config";
+import * as basic from './basic.csv'
 
-const LICENSE_KEY = flatfileLicense
+// const urlParams = new URLSearchParams(window.location.search);
+// const LICENSE_KEY = urlParams.get('license');
+const LICENSE_KEY = "4171f0b4-5f5c-4b32-a008-356ebb813e4e";
 
 // this is the configuration for the Flatile importer
 FlatfileImporter.setVersion(2);
@@ -18,17 +19,32 @@ class App extends Component {
     constructor() {
         super();
         this.launch = this.launch.bind(this);
-        // this is how you initialize the flatfile importer within your React application
-        this.importer = new FlatfileImporter(LICENSE_KEY, flatfileConfigs[0]);
+        this.importer = new FlatfileImporter(LICENSE_KEY, flatfileConfig);
         this.state = {
             results: "Your raw output will appear here."
         };
+        this.importer.registerRecordHook((record, index) => {
+            const out = {};
+            if (record.zip && record.zip.length < 5) {
+                out.zip = {
+                    value: record.zip.padStart(5, "0"),
+                    info: [
+                        {
+                            message: "Zipcode was padded with zeroes",
+                            level: "warning"
+                        }
+                    ]
+                };
+            }
+            return out;
+        });
+        this.importer.setCustomer({
+            userId: "19235",
+            name: "John Doe"
+        });
     }
     launch() {
-        RecordHooks();
-        this.importer
-            .requestDataFromUser()
-            .then(results => {
+        this.importer.requestDataFromUser().then(results => {
                 this.importer.displayLoader();
                 setTimeout(() => {
                     this.importer.displaySuccess("Success!");
@@ -57,7 +73,15 @@ class App extends Component {
                         </p>
                     </div>
                 )}
-                <DemoApp />
+                <div id="main">
+                    <input type="button" id="launch" value="Import users" onClick={this.launch}/>
+                    <div className="download">
+                        <a href={basic} target="_blank" rel="noopener noreferrer" download="basic.csv">
+                            Download a sample csv file here
+                        </a>
+                    </div>
+                    <textarea id="raw_output" readOnly value={this.state.results} />
+                </div>
             </div>
         );
     }
