@@ -1,10 +1,14 @@
 export const flatfileConfig = {
-    type: "Basic Example",
+    type: "Data Hooks Example",
     fields: [
         {
-            label: "Name",
-            key: "name",
+            label: "First Name",
+            key: "firstName",
             validators: [{ validate: "required" }]
+        },
+        {
+            label: "Last Name",
+            key: "lastName",
         },
         {
             label: "User ID",
@@ -18,20 +22,14 @@ export const flatfileConfig = {
         {
             label: "City",
             key: "city",
-            validators: [{validate: "required_without", fields: ["zip"], error: "Must have either city and state OR zip code"}]
         },
         {
             label: "State",
             key: "state",
-            validators: [
-                { validate: "regex_matches", regex: "^[a-zA-Z]{0,2}$", error: "Must be the 2 letter state code" },
-                {validate: "required_without", fields: ["zip"], error: "Must have either city and state OR zip code"}
-            ]
         },
         {
             label: "Zip Code",
             key: "zip",
-            validators: [{validate: "required_without", fields: ["city", "state"], error: "Must have either city and state OR zip code"}]
         }
     ],
     allowInvalidSubmit: true,

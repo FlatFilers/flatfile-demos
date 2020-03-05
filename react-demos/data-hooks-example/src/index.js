@@ -6,7 +6,7 @@ import FlatfileImporter from "flatfile-csv-importer";
 import "./styles.css";
 
 import {flatfileConfig} from "./flatfile-config";
-import * as basic from "./basic.csv"
+import * as dataHooks from "./data-hooks.csv"
 
 const urlParams = new URLSearchParams(window.location.search);
 const LICENSE_KEY = urlParams.get('license');
@@ -25,6 +25,13 @@ class App extends Component {
         };
         this.importer.registerRecordHook((record, index) => {
             const out = {};
+            if (record.firstName && !record.lastName) {
+                if (record.firstName.includes(" ")) {
+                    const components = record.firstName.split(" ");
+                    out.firstName = { value: components.shift() };
+                    out.lastName = { value: components.join(" ") };
+                }
+            }
             if (record.zip && record.zip.length < 5) {
                 out.zip = {
                     value: record.zip.padStart(5, "0"),
@@ -36,8 +43,39 @@ class App extends Component {
                     ]
                 };
             }
+            if (!record.zip && (!record.city || !record.state)) {
+                out.zip = {
+                    info: [
+                        {
+                            message: "Either city/state or zip must be provided.",
+                            level: "error"
+                        }
+                    ]
+                }
+            }
+            if (!record.zip && (!record.city || !record.state)) {
+                out.city = {
+                    info: [
+                        {
+                            message: "Either city/state or zip must be provided.",
+                            level: "error"
+                        }
+                    ]
+                }
+            }
+            if (!record.zip && (!record.city || !record.state)) {
+                out.state = {
+                    info: [
+                        {
+                            message: "Either city/state or zip must be provided.",
+                            level: "error"
+                        }
+                    ]
+                }
+            }
             return out;
         });
+
         this.importer.setCustomer({
             userId: "19235",
             name: "John Doe"
@@ -75,7 +113,7 @@ class App extends Component {
                 <div id="main">
                     <input type="button" id="launch" value="Import users" onClick={this.launch}/>
                     <div className="download">
-                        <a href={basic} target="_blank" rel="noopener noreferrer" download="basic.csv">
+                        <a href={dataHooks} target="_blank" rel="noopener noreferrer" download="data-hooks.csv">
                             Download a sample csv file here
                         </a>
                     </div>
