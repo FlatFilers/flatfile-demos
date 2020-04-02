@@ -67,13 +67,14 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin: 96px 0 64px 0;
+    margin: 64px 0 64px 0;
     border: none;
     border-radius: 4px;
     color: #fff;
     display: inline-block;
-    padding: 20px 64px 0px;
-    height: 44px;
+    padding: 0 16px;
+    height: 48px;
+    line-height: 3;
     cursor: pointer;
     transition: background-color 0.2s;
     font-size: 15px;
@@ -88,6 +89,19 @@ body {
 #github:hover,
 #github:active{
     background-color: #8C66FF;
+}
+
+.button-icon-left {
+    display: inline-block;
+    margin-right: 0.35rem;
+    position: relative;
+    top: 6px;
+}
+
+.button-icon-right {
+    display: inline-block;
+    margin-left: 0.35rem;
+    position: relative;
 }
 
 .licenseAsk {

@@ -9,7 +9,7 @@ import {flatfileConfig} from "./flatfile-config";
 import * as basic from './basic.csv'
 
 const urlParams = new URLSearchParams(window.location.search);
-const LICENSE_KEY = urlParams.get('license');
+const LICENSE_KEY = urlParams.get('license'); // place license key here
 
 // this is the configuration for the Flatile importer
 FlatfileImporter.setVersion(2);
@@ -62,10 +62,15 @@ class App extends Component {
             <div className="App">
                 {LICENSE_KEY ? null : (
                     <div className="licenseAsk">
-                        <h1>No license key found.</h1>
-                        <p>Either put a license key on line 12 or login with GitHub below.</p>
+                        <h1>👋 Hey there! 👋</h1>
+                        <p>We couldn't find your license key. Place your license key 🔑 on line 12 or you can sign-up or sign-in with GitHub below!</p>
                         <a id="github" className="button"
                            href="http://api.flatfile.io/auth/github?redirect_url=http://localhost:3377">
+                            <span className="button-icon-left">
+                                <img alt="Github Octocat logo | Login with Github"
+                                    src="https://cdn2.hubspot.net/hubfs/4588656/landing-page-images/React-landing-page/github.svg"
+                                    height="24" width="24"/>
+                            </span>
                             Login with Github
                             <span className="button-icon-right">&rarr;</span>
                         </a>
