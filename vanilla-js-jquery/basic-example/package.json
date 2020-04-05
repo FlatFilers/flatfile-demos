@@ -1,10 +1,10 @@
 {
-  "name": "versa-commerce-example",
+  "name": "vanillajs-jquery-example",
   "version": "1.0.0",
   "description": "A demo of Flatfile using Parcel",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "parcel index.html --open --port 3377",
     "build": "parcel build index.html"
   },
   "dependencies": {
