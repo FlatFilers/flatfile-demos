@@ -104,7 +104,7 @@ class App extends Component {
                         <h1>No license key found.</h1>
                         <p>Either put a license key on line 12 or login with GitHub below.</p>
                         <a id="github" className="button"
-                           href="http://localhost:3000/auth/github?redirect_url=http://localhost:3377">
+                           href="http://api.flatfile.io/auth/github?redirect_url=http://localhost:3377">
                             Login with Github
                             <span className="button-icon-right">&rarr;</span>
                         </a>
