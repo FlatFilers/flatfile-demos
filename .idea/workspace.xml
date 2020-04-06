@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="656c93ec-0269-402d-88fd-d22d44b7d740" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/react-demos/data-hooks-example/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-demos/data-hooks-example/src/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="656c93ec-0269-402d-88fd-d22d44b7d740" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
