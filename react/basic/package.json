@@ -5,7 +5,9 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@tippyjs/react": "^4.0.0-alpha.4",
     "flatfile-csv-importer": "0.2.9",
+    "prettier": "^2.0.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "^3.3.0"
