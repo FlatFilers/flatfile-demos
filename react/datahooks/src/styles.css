@@ -1,110 +1,411 @@
+/*
+    All the code in this file is used for the layout of index.js.
+    None of this is necessary to run Flatfile in your own application.
+ */
+
+/* Global Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
 body {
-    background: #fff;
-    color: #3c4151;
-    font-family: "Gotham Pro", Arial, serif;
+    color: var(--color-text);
+    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+:root {
+    --color-accent: #7a32e9;
+    --color-background: #000;
+    --color-text-dark: #1d2830;
+    --color-text: #303346;
+    --color-text-accent: #3f5c71;
+    --color-editor-text: #afbed0;
 }
 
-.download {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+/* Demo Styles */
+header,
+main,
+aside {
+    font-size: 1rem;
+}
+
+.block-intro {
+    padding-bottom: 4rem;
+    padding-top: 5rem;
     text-align: center;
 }
+.page-title {
+    font-weight: 500;
+    font-size: 3.25rem;
+}
+span.label {
+    color: var(--color-accent);
+    display: inline-block;
+    font-size: 0.925rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+}
 
-.download a {
-    color: #3c4151;
+.block-license {
+    background-color: #ffffff;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.25rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 2rem;
+}
+.block-license::after {
+    background-color: var(--color-accent);
+    content: "";
+    height: 10rem;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    width: 1px;
+    z-index: -1;
+}
+.button {
+    align-items: center;
+    background-color: var(--color-text-dark);
+    border-radius: 0.15em;
+    color: #ffffff;
+    display: inline-flex;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+}
+.button-icon {
+    display: inline-block;
+    position: relative;
+}
+.button-icon.left {
+    margin-right: 0.5rem;
+    top: 1px;
+}
+.button-icon.right {
+    margin-left: 0.75rem;
+    top: -1px;
+}
+.has-license {
+    text-align: center;
+}
+.note {
+    color: var(--color-text-accent);
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.block-editor {
+    background-color: var(--color-text-dark);
+    border-radius: 0.325rem;
+    box-shadow: 0 2.3px 8px rgba(0, 0, 0, 0.081),
+    0 7.8px 26.8px rgba(0, 0, 0, 0.119), 0 35px 120px rgba(0, 0, 0, 0.2);
+    font-size: 0;
+    margin-top: 5rem;
+    padding: 2rem;
+}
+.editor-divider {
+    background-color: var(--color-text-accent);
+    height: 1px;
+    border: 0;
+    margin: 1.75rem 0;
+}
+.code-textarea {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    color: var(--color-editor-text);
+    resize: none;
+    font-family: monospace;
+    font-size: 1rem;
+    outline: 0;
+    padding: 0;
+    min-width: 100%;
+}
+.code-preview {
+    border: 1px dashed var(--color-text-accent);
+    padding: 1rem;
+}
+.code-preview-text {
+    color: var(--color-editor-text);
+    font-family: monospace;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+.code-preview-json {
+    color: var(--color-editor-text);
+    font-family: monospace;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+.code-output {
+}
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid var(--color-text-accent);
+    display: inline-block;
+    position: relative;
+    right: -8px;
+    top: -1px;
+    vertical-align: middle;
+}
+.code-output-action {
+    color: var(--color-text-accent);
+}
+.code-output-preview {
+    align-items: center;
+    color: var(--color-editor-text);
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-between;
+}
+.code-output-message {
+    color: salmon;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
     text-decoration: none;
 }
 
-.download a:hover {
-    color: #1d62b4;
+.block-features {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 6.5rem;
+}
+.callout-npx {
+    align-items: center;
+    background-color: #dbe5f0;
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    white-space: nowrap;
+}
+.npx-script {
+    background-color: var(--color-text-dark);
+    border-radius: 0.25em;
+    color: var(--color-editor-text);
+    display: inline-block;
+    font-family: monospace;
+    padding: 0.5rem 0.75rem;
+}
+.callout-title {
+    font-weight: 600;
+    margin-right: 1em;
+}
+.callout-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    margin: 2.5rem -2.5rem 0;
+    padding: 0;
+}
+.callout-feature-li {
+    color: var(--color-text-accent);
+    font-size: 0.925rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.callout-feature-li::before {
+    background-image: url(data:image/png;base64,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);
+    background-size: cover;
+    content: "";
+    display: inline-block;
+    height: 24px;
+    margin-right: 0.75rem;
+    position: relative;
+    top: -1px;
+    width: 24px;
+    vertical-align: middle;
+}
+.callout-feature-li:nth-of-type(n + 4) {
+    margin-top: 3rem;
+}
+
+.block-footer {
+    display: flex;
+    font-size: 0.925rem;
+    justify-content: space-between;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 6.5rem;
+    padding-bottom: 2rem;
+}
+
+.link {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.logo-section {
+    position: relative;
+    left: 15px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo-left {
+    position: relative;
+    left: 8px;
+}
+
+.logo-right {
+    z-index: 1000;
+    position: relative;
+    right: 8px;
+    top: 5px;
+    height: 60px;
+}
+
+.license-header > h3 {
+    display: inline-block;
+    font-weight: 500;
+}
+
+.license-header > div {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #aaff00;
+    margin-left: 7px;
+}
+
+.license-info {
+    background-color: #dbe5f0;
+    padding: 8px;
+    color: red;
+    margin-right: 10%;
+    letter-spacing: 0.05em;
+    font-weight: 500;
 }
 
 #launch {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 96px 0 64px 0;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    display: block;
-    padding: 0 64px;
-    height: 44px;
     cursor: pointer;
-    transition: background-color 0.2s;
-    font-size: 15px;
-    font-weight: 500;
-    outline: 0;
-    background-color: #4a90e2;
-}
-
-#launch:focus,
-#launch:hover {
-    background-color: #2171ce;
-}
-
-#launch:active {
-    background-color: #1d62b4;
-}
-
-#raw_output {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    padding: 64px;
-    margin: 32px 0;
-    border: 1px solid #c1c6d1;
-    border-radius: 4px;
-    font-family: "Courier New", monospace;
-    background-color: #3c4151;
-    color: #fff;
-    height: 200px;
-}
-
-#github {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 96px 0 64px 0;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    display: inline-block;
-    padding: 20px 64px 0px;
-    height: 44px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    font-size: 15px;
-    font-weight: 500;
-    outline: 0;
+    border-radius: 0.25em;
     background-color: rgb(121, 76, 255);
-    text-decoration: none;
-    align-items: baseline;
+    box-shadow: rgba(0, 0, 0, 0.082) 0px 0.1px 0.7px,
+    rgba(0, 0, 0, 0.118) 0px 0.4px 2.2px, rgba(0, 0, 0, 0.2) 0px 2px 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    transition: box-shadow 0.3s ease-out 0s, transform 0.2s linear 0s,
+    background-color 0.2s linear 0s;
+    color: rgb(255, 255, 255);
 }
 
-#github:focus,
-#github:hover,
-#github:active{
-    background-color: #8C66FF;
+#launch:hover {
+    background-color: rgb(140, 101, 255);
+    transform: translateY(-1px);
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 0.2px 0.5px -2px,
+    rgba(0, 0, 0, 0.157) 0px 0.4px 1.3px -2px,
+    rgba(0, 0, 0, 0.196) 0px 0.9px 2.7px -2px,
+    rgba(0, 0, 0, 0.24) 0px 1.8px 5.5px -2px,
+    rgba(0, 0, 0, 0.35) 0px 5px 15px -2px;
 }
 
-.licenseAsk {
-    position: absolute;
-    top: 5vh;
-    left: 5vw;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.95);
-    width: 90vw;
-    height: 90vh;
+#file-download {
+    padding-top: 25px;
 }
 
-h1 {
-    margin-top: 5%;
-}
-
-h1,
-p {
-    text-align: center;
+#file-download > p {
+    display: inline-block;
+    margin-right: 5%;
 }
