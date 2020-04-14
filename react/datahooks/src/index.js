@@ -192,7 +192,7 @@ class App extends Component {
                     )}
                 </main>
                 <aside className="block-features">
-                    <div className="callout-npx">
+                    <div className="callout-npx" id="removeBg">
                         <h3 className="callout-title">
                             Find your code here:
                         </h3>
