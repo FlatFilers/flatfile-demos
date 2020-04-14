@@ -12,6 +12,8 @@ import reactLogo from "./react.png";
 import download from "./download-thick-bottom.png";
 import * as basic from './basic.csv'
 
+import {demoPath} from "./demo-path"
+
 const urlParams = new URLSearchParams(window.location.search);
 const LICENSE_KEY = urlParams.get('license'); // place license key here
 
@@ -152,10 +154,10 @@ class App extends Component {
                 <aside className="block-features">
                     <div className="callout-npx">
                         <h3 className="callout-title">
-                            Find the project files where you ran the npx script with:
+                            Find your code here:
                         </h3>
                         <span className="npx-script">
-              {"cd basic"}
+              {demoPath}
             </span>
                     </div>
                     <ul className="callout-features">

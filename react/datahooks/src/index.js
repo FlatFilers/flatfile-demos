@@ -12,6 +12,8 @@ import reactLogo from "./react.png";
 import download from "./download-thick-bottom.png";
 import * as dataHooks from "./data-hooks.csv"
 
+import {demoPath} from "./demo-path.js"
+
 const urlParams = new URLSearchParams(window.location.search);
 const LICENSE_KEY = urlParams.get('license');
 
@@ -151,7 +153,7 @@ class App extends Component {
                             <a
                                 id="github"
                                 className="button"
-                                href="http://api.flatfile.io/auth/github?redirect_url=https://try-react.flatfile.io/"
+                                href="http://api.flatfile.io/auth/github?redirect_url=http://localhost:3377"
                             >
                 <span className="button-icon left">
                   <img
@@ -192,10 +194,10 @@ class App extends Component {
                 <aside className="block-features">
                     <div className="callout-npx">
                         <h3 className="callout-title">
-                            Find the project files where you ran the npx script with:
+                            Find your code here:
                         </h3>
                         <span className="npx-script">
-              {"cd datahooks"}
+              {demoPath}
             </span>
                     </div>
                     <ul className="callout-features">
