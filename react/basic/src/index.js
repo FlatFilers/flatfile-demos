@@ -153,7 +153,7 @@ class App extends Component {
                 </main>
                 <aside className="block-features">
                     <div className="callout-npx">
-                        <h3 className="callout-title">
+                        <h3 className="callout-title" id="removeBg">
                             Find your code here:
                         </h3>
                         <span className="npx-script">
