@@ -20,9 +20,6 @@ const PanelDiv = styled.div`
         list-style: none;
         overflow: scroll;
     }
-    li:first-child > div {
-        border: 3px solid ${sideBarColors.background};
-    }
 `
 
 const ContactPanel = styled.div`
@@ -86,17 +83,17 @@ const ContactPanel = styled.div`
 
 export const ClientPanel = props => {
     const initialCompany = {
-        company: 'Pixonyx',
-        contact: 'Lilias Adamolli',
-        status: 'contract',
-        industry: 'Human Resources',
-        address: '7 Carey Court',
-        city: 'Washington',
-        state: 'DC',
-        zip: '20430',
-        size: '233',
-        phone: '202-783-1529',
-        products: 'paper',
+        company: '',
+        contact: '',
+        status: '',
+        industry: '',
+        address: '',
+        city: '',
+        state: '',
+        zip: '',
+        size: '',
+        phone: '',
+        products: '',
     }
     const results = props.results
     const [companyInfo, setCompanyInfo] = useState(initialCompany)
@@ -115,9 +112,11 @@ export const ClientPanel = props => {
                     <ul>
                         {results.map(item => (
                             <ListCard
+                                fullItem={item}
                                 key={results.indexOf(item)}
                                 company={item.company}
                                 status={item.status}
+                                setCompany={setCompanyInfo}
                             />
                         ))}
                     </ul>
@@ -134,7 +133,7 @@ export const ClientPanel = props => {
                                 <p>City, State Zip:</p>
                                 <h3>
                                     {companyInfo.city +
-                                        ', ' +
+                                        ' ' +
                                         companyInfo.state +
                                         ' ' +
                                         companyInfo.zip}

@@ -59,5 +59,5 @@ export const flatfileConfig = {
     allowInvalidSubmit: true,
     managed: true,
     allowCustom: false,
-    disableManualInput: true,
+    disableManualInput: false,
 }
