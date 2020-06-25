@@ -41,6 +41,7 @@ const SideBarDiv = styled.div`
 
         img {
             width: 18%;
+            max-width: 25px;
             height: auto;
             margin-bottom: unset;
         }
