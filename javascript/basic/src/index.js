@@ -1,13 +1,10 @@
-import FlatfileImporter from "flatfile-csv-importer";
+import FlatfileImporter from "@flatfile/adapter";
 import $ from "jquery";
 import {flatfileConfig} from "./flatfile-config"
 
-FlatfileImporter.setVersion(2);
+const LICENSE_KEY = ''
 
-const LICENSE_KEY = urlParams.get('license');
-// const LICENSE_KEY = "4171f0b4-5f5c-4b32-a008-356ebb813e4e"
-
-if (!LICENSE_KEY) {
+if (LICENSE_KEY) {
     let github = document.getElementById('githubLogin')
     github.style.display = "none";
 }

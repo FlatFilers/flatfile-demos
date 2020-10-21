@@ -8,7 +8,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "flatfile-csv-importer": "0.2.9",
+    "@flatfile/adapter": "^2.1.1",
     "jquery": "3.3.1"
   },
   "devDependencies": {
