@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import Tippy from "@tippyjs/react";
-import FlatfileImporter from "flatfile-csv-importer";
+import FlatfileImporter from "@flatfile/adapter";
 
 import "tippy.js/dist/tippy.css";
 import "./styles.css";
@@ -14,11 +14,7 @@ import * as basic from './basic.csv'
 
 import {demoPath} from "./demo-path"
 
-const urlParams = new URLSearchParams(window.location.search);
-const LICENSE_KEY = urlParams.get('license'); // place license key here
-
-// this is the configuration for the Flatile importer
-FlatfileImporter.setVersion(2);
+const LICENSE_KEY = ''; // place license key here
 
 class App extends Component {
     constructor() {
@@ -113,17 +109,9 @@ class App extends Component {
                             <a
                                 id="github"
                                 className="button"
-                                href="http://api.flatfile.io/auth/github?redirect_url=http://localhost:3377/"
+                                href="http://app.flatfile.io/"
                             >
-                <span className="button-icon left">
-                  <img
-                      alt="Github Octocat logo | Sign in with Github"
-                      src="https://cdn2.hubspot.net/hubfs/4588656/landing-page-images/React-landing-page/github.svg"
-                      height="24"
-                      width="24"
-                  />
-                </span>
-                                Sign in with Github
+                                Sign up or Login to Flatfile
                                 <span className="button-icon right">&rarr;</span>
                             </a>
                             <p className="note">{this.state.licensePlaceholder}</p>
@@ -147,19 +135,20 @@ class App extends Component {
                         </div>
                     ) : (
                         <div className="code-preview">
-                            <p className="code-preview-text">License key required</p>
+                            <p className="code-preview-text">Place your license key on line 17 of index.js</p>
                         </div>
                     )}
                 </main>
                 <aside className="block-features">
-                    <div className="callout-npx">
-                        <h3 className="callout-title" id="removeBg">
+                    {demoPath !== 'Path not found' &&
+                    <div className="callout-npx" id="removeBg">
+                        <h3 className="callout-title">
                             Find your code here:
                         </h3>
                         <span className="npx-script">
-              {demoPath}
-            </span>
-                    </div>
+                                {demoPath}
+                             </span>
+                    </div>}
                     <ul className="callout-features">
                         <li className="callout-feature-li">Runs in the browser</li>
                         <li className="callout-feature-li">Minimal dependencies</li>
