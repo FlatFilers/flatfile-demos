@@ -3,3 +3,12 @@ node_modules
 .idea
 
 dist
+
+javascript/basic/dist
+javascript/datahooks/dist
+
+react/basic/dist
+react/datahooks/dist
+react/crm/dist
+
+vue
