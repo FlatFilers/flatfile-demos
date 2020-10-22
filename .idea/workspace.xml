@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="656c93ec-0269-402d-88fd-d22d44b7d740" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/basic/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/basic/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/datahooks/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/datahooks/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/datahooks/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/datahooks/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/datahooks/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/datahooks/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +67,7 @@
       <workItem from="1586357304084" duration="34000" />
       <workItem from="1586841006067" duration="1069000" />
       <workItem from="1603303705710" duration="1970000" />
-      <workItem from="1603376569053" duration="403000" />
+      <workItem from="1603376569053" duration="1996000" />
     </task>
     <servers />
   </component>

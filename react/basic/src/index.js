@@ -109,7 +109,7 @@ class App extends Component {
                             <a
                                 id="github"
                                 className="button"
-                                href="http://api.flatfile.io/auth/github?redirect_url=http://localhost:3377/"
+                                href="http://app.flatfile.io/"
                             >
                                 Sign up or Login to Flatfile
                                 <span className="button-icon right">&rarr;</span>
@@ -140,14 +140,15 @@ class App extends Component {
                     )}
                 </main>
                 <aside className="block-features">
-                    <div className="callout-npx">
-                        <h3 className="callout-title" id="removeBg">
+                    {demoPath !== 'Path not found' &&
+                    <div className="callout-npx" id="removeBg">
+                        <h3 className="callout-title">
                             Find your code here:
                         </h3>
                         <span className="npx-script">
-              {demoPath}
-            </span>
-                    </div>
+                                {demoPath}
+                             </span>
+                    </div>}
                     <ul className="callout-features">
                         <li className="callout-feature-li">Runs in the browser</li>
                         <li className="callout-feature-li">Minimal dependencies</li>
